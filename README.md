@@ -6,7 +6,7 @@
 
 
 <b>Demo</b>
- https://recordline1.github.io/FooD-MooD/
+[ https://recordline1.github.io/FooD-MooD/](https://recordline1.github.io/FooDi/)
  
 <i>Technologies used</i>
 <div>
