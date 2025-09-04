@@ -1,4 +1,4 @@
-<h1>Food-MooD</h1>
+<h1>FooDi</h1>
 
 <i>One-page adaptive website for a modern pizzeria.</i>
 
