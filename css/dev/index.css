@@ -648,6 +648,10 @@ body {
   width: 3.125rem;
   height: 3.125rem;
   cursor: pointer;
+  transition: opacity 0.3s;
+}
+.hero__arrow.hidden {
+  opacity: 0;
 }
 .hero__arrow::before, .hero__arrow::after {
   content: "";
@@ -655,18 +659,31 @@ body {
   right: 0.625rem;
   top: 50%;
   border-radius: 0.25rem;
-  background-color: #ffffff;
-  height: 0.1875rem;
-  width: 0.9375rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-left: 0.3125rem solid #d68240;
+  border-bottom: 0.3125rem solid #d68240;
+  transform: rotate(-45deg);
   transition: transform 0.5s ease 0s;
+  animation-name: animArrow;
+}
+@keyframes animArrow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate(0, 0rem) rotate(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0.625rem) rotate(-45deg);
+  }
 }
 .hero__arrow::before {
-  transform: translate(-75%, -50%) rotate(40deg);
+  transform: translate(0, 3.125rem) rotate(-45deg);
+  animation: animArrow 2s infinite ease-in-out;
 }
-.hero__arrow::after {
-  transform: translate(0, -50%) rotate(-40deg);
-}
-
 .info__container {
   display: grid;
   grid-auto-rows: 1fr;

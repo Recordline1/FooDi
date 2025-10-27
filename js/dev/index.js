@@ -5547,3 +5547,13 @@ function pageNavigation() {
   }
 }
 document.querySelector("[data-fls-scrollto]") ? window.addEventListener("load", pageNavigation) : null;
+function animArrow() {
+  const arrow = document.querySelector(".hero__arrow");
+  if (window.scrollY > 100) {
+    arrow.classList.add("hidden");
+  } else {
+    arrow.classList.remove("hidden");
+  }
+}
+document.addEventListener("scroll", animArrow, { passive: true });
+animArrow();
