@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>FooDi</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1756834361336"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756834361336">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1762011829715"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1762011829715">
 	</head>
 	<body data-fls-watcher="">
 		<div class="wrapper">
@@ -47,7 +47,7 @@
 </each>
 </fetch>
 -->
-					<a href="#" class="header__button">RESERVATION</a>
+					<a data-fls-popup-link="reserve" href="#" class="header__button">RESERVATION</a>
 				</div>
 			</header>
 			<main class="foodi">
@@ -394,7 +394,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="foods__cards">
+						<div data-fls-cursor="" class="foods__cards">
 							<div class="foods__card food-card">
 								<a class="food-card__image" href="#">
 									<picture>
@@ -476,6 +476,50 @@
 						<img class="newsletter__bg" alt="Image" src="./assets/img/newsletter/NewsletterBG.webp">
 					</picture>
 				</section>
+				<div data-fls-reserve="" data-fls-popup="reserve" aria-hidden="true" class="reserve">
+					<div data-fls-popup-wrapper="" class="reserve__wrapper">
+						<div data-fls-popup-body="" class="reserve__body">
+							<button data-fls-popup-close="" type="button" class="reserve__close">
+								<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+									<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+								</svg>
+							</button>
+							<div data-fls-popup-content="" class="reserve__text">
+								<h2 class="reserve__title">RESERVATION</h2>
+								<form data-fls-form-gotoerr="" class="reserve__form">
+									<!-- input Name -->
+									<input data-fls-input="" autocomplete="off" required type="text" name="form[]" data-error="Помилка" placeholder="Name *" class="reserve__input">
+									<!-- input Phone -->
+									<input data-fls-input="" autocomplete="off" required type="tel" name="form[]" pattern="[\+]\d{1,3}[\d\s\-\(\)]{8,20}|\d{9,12}" data-error="Введіть коректний номер телефону" placeholder="Phone *" class="reserve__input">
+									<!-- input Email -->
+									<input id="email" data-fls-input="" autocomplete="off" type="email" name="form[]" data-error="Помилка" placeholder="Email" class="reserve__input">
+									<!-- input Date -->
+									<input class="reserve__select" type="date" id="date" name="date" min="2025-10-30" required>
+									<select class="reserve__select" name="form[]" data-fls-select="" id="time" required data-fls-select-modif="form">
+										<option value="1" selected>Select time</option>
+										<option value="2">18:00</option>
+										<option value="3">18:30</option>
+										<option value="4">19:00</option>
+										<option value="5">19:30</option>
+										<option value="6">20:00</option>
+									</select>
+									<label class="reserve__label" for="guests">Number of person</label>
+									<select class="reserve__select" name="form[]" id="guests" required data-fls-select="" data-fls-select-modif="form">
+										<option value="1" selected>1 person</option>
+										<option value="2">2 person</option>
+										<option value="3">3 person</option>
+										<option value="4">4 person</option>
+									</select>
+									<label class="reserve__label" for="comment">Commit (option)</label>
+									<textarea class="reserve__textarea" id="comment" name="comment" rows="3"></textarea>
+									<p class="reserve__required">* - Fields are required</p>
+									<button type="submit" class="reserve__submit">Book a table</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
