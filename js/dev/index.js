@@ -13164,7 +13164,7 @@ document.fonts.ready.then(() => {
         delay: i * 0.3,
         scrollTrigger: {
           trigger: card,
-          start: "top 100%"
+          start: "top 110%"
         }
       }
     );

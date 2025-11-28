@@ -786,6 +786,7 @@ body::after {
   position: relative;
 }
 .reserve__body::after {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
@@ -795,8 +796,8 @@ body::after {
   background: rgba(0, 0, 0, 0.726);
 }
 .reserve__close {
-  width: 100%;
-  text-align: right;
+  display: grid;
+  justify-self: end;
 }
 .reserve__form {
   display: flex;
@@ -824,7 +825,6 @@ body::after {
 .reserve__input, .reserve__textarea, .reserve__select {
   padding: 0.75rem;
   border-bottom: 0.0625rem solid #ddd;
-  border-radius: 0.3125rem;
   font-size: 1rem;
   height: 2.625rem;
   margin-bottom: 1rem;
